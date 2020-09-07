@@ -1,11 +1,26 @@
+<hr class="mt-3">
+<h3 class="mt-3">ngClass</h3>
 <div [ngClass]="alert" class="alert ">Hola</div>
 <button class="btn btn-outline-primary" (click)=" alert = 'alert-info'" > Cambiar primary </button>
 <button class="btn btn-outline-dark" (click)="alert  = 'alert-dark'" > Cambiar dark </button>
 
-<h3 [ngClass]="{ 'text-danger': propiedades , 'text-info': !propiedades }" class="mt-3">
+<h5 [ngClass]="{ 'text-danger': objeto.color , 'text-info': !objeto.color }" class="mt-3">
     Hola Mundo
-</h3>
-
+</h5>
+ 
 <button class="btn" 
-        (click)="propiedades = !propiedades"
-        [ngClass]="{ ' btn-outline-primary': !propiedades, ' btn-outline-danger': propiedades }" >Cambiar color texto</button>
+        (click)="objeto.color = !objeto.color"
+        [ngClass]="{ ' btn-outline-danger': objeto.color, ' btn-outline-primary': !objeto.color }" >Cambiar color texto</button>
+
+<hr class=" mt-3 ">
+<h3 class="">Proceso asíncrono</h3>
+<button (click)="ejecutar()"
+        class="btn btn-outline-success"
+        [disabled]="loading">
+
+    <i  [ngClass]="{ 'fa-save': !loading , 'fa-sync fa-spin': loading }"
+        class="fa mr-2"></i>
+    <span *ngIf="!loading">Guardar cambios</span>
+    <span *ngIf="loading">Espere por favor...</span>
+
+</button> 

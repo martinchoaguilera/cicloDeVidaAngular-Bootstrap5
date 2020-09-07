@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ng-style',
   template: `
+
+    <hr class="mt-3">
+    <h3 class="mt-3"> ngStyle </h3>
     <!-- <p [ngStyle]="{'font-size': tamano + 'px'}"> -->
     <p [style.fontSize.px]="tamano">
       Hola mundo..estoy utilizando ng-Style!

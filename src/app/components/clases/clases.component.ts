@@ -7,14 +7,23 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ClasesComponent implements OnInit {
-   
+     
   // alerts: string[] = ['alert-primary',  'alert-secondary',  'alert-danger',  'alert-success']  ;
   alert: string= 'alert-primary';
+  objeto: any ={
+    color: true,
+  } 
+  
+  loading: boolean = false;
 
-  propiedades : boolean= false;
   constructor() { 
   }
 
   ngOnInit(): void {
+  }
+
+  ejecutar() {
+    this.loading= true;
+    setTimeout( ()=> this.loading = false, 3000)
   }
 }

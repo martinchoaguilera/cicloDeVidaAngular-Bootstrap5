@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container mt-3">
-    <h1>Demos <small>Angular</small></h1>
+    <h1>Demos <small appResaltado>Angular</small></h1>
     <hr>
 
     <app-ng-style></app-ng-style>
@@ -12,4 +12,11 @@
     </p>
 
     <app-clases class="mt-3"></app-clases>
+
+
+    <hr class="mt-3">
+
+    <h2 class="mt-3">Directivas Personalizadas</h2>
+
+    <p class="" [appResaltado]="'red'" >Hola mundo</p>
 </div>
